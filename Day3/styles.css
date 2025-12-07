@@ -1,0 +1,67 @@
+body {
+    background-image: url('bg.jpg');/*url('overley.png');*/
+    background-size:cover ;
+    flex-wrap: wrap;
+    background-repeat:no-repeat;
+    background-size: cover;
+background-position: center;
+/* because there is an white space after the image.. it seems like does not fit for the page*/
+}
+
+.overley{
+/* background-position:center; 
+background-size:cover; */
+/* background-attachment: fixed; */
+margin:90px 100px 90px 100px;
+opacity: 0.9;
+padding:90px 0px;
+background-image: url('overley.png');
+background-size:cover;
+background-position: center;
+border:1px;
+border-radius:50px;
+}
+
+img{
+    margin-left:50px;
+    border-radius:20px;
+}
+
+
+.parent{
+    display:flex;
+  color: white;
+  justify-content:space-around;
+
+}
+
+.child{
+       margin: 0px 50px;
+}
+
+.child2{
+    display:flex;
+    flex-wrap:wrap;
+     justify-content:flex-start;
+}
+
+ol{
+    list-style:none;
+   
+}
+
+p{
+ color:blueviolet;
+
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h3{
+     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size:small;
+}
+
