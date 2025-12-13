@@ -1,0 +1,111 @@
+
+
+.default-bg{
+background-image: url(images/quiz.png);
+background-size:cover;
+background-repeat: no-repeat;
+}
+
+.container1{
+margin: 1px 10px;
+    padding:5px;
+    color:white;
+    text-align:center;
+    font-family:sans-serif;
+    background-color:orchid;
+    border-radius:100px 100px 0px 0px;
+}
+
+.quiz-box{
+    display:flex;
+flex-direction:column;
+    width:35%;
+    height:50%;
+    margin:5px 650px;
+    background-color: #E0B0FF;
+    border-radius:100px 100px 0px 0px;
+
+}
+
+#question{
+   margin:10px 100px;
+    padding:20px;
+    color:white;
+    font-size: x-large;
+font-family:'Times New Roman', Times, serif;
+    background-color:blueviolet;
+   border-radius:4px;
+   width:fit-content;
+     text-align:center;
+     opacity:1;
+}
+
+.op-btn{  
+    background-color:blueviolet;
+    opacity:0.7;
+     padding:5px;
+     font-size:medium;
+     cursor:pointer;
+     transition:0.3s;
+}
+
+.op-btn:hover{
+    color:white;
+    font-size:larger;
+   
+}
+
+#options{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+     color:white;
+    text-align:center;
+    font-family:sans-serif;
+    margin:30px 150px; 
+    gap:10px;
+}
+
+.op-btn.selected{
+    background-color:white !important;
+    color:blueviolet;
+    font-weight:100;
+}
+
+
+
+#nxt-btn{
+    border:2px solid violet;
+background-color:orchid;
+    border-radius:5px;
+}
+
+#Q-No{
+    margin:10% 20% 0% 58%;
+   width:3%;
+   padding:10px;
+   text-align:center;
+   border:1px;
+    border-radius:50px;
+    background-color:white;
+    
+}
+
+
+.bg-low {
+    background-image: url("low-score.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-medium {
+    background-image: url("medium-score.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-high {
+    background-image: url("high-score.png");
+    background-size: cover;
+    background-position: center;
+}
