@@ -1,31 +1,63 @@
 import Women from "../assets/item6.jpeg";
 import Men from "../assets/item8.jpeg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Cart() {
-  const [items, setItems] = useState([
-    { id: 1, name: "T-Shirt", price: 500, qty: 1, img: Women },
-    { id: 2, name: "Sneakers", price: 1200, qty: 1, img: Men },
-  ]);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchCart = async () => {
+      try {
+        const res = await fetch("http://localhost:3001/cart");
+        const data = await res.json();
+        if (data.length === 0) {
+          setItems([
+            { id: 1, name: "T-Shirt", price: 500, qty: 1, img: Women },
+            { id: 2, name: "Sneakers", price: 1200, qty: 1, img: Men },
+          ]);
+        } else {
+          setItems(data);
+        }
+      } catch {
+        setItems([
+          { id: 1, name: "T-Shirt", price: 500, qty: 1, img: Women },
+          { id: 2, name: "Sneakers", price: 1200, qty: 1, img: Men },
+        ]);
+      }
+    };
+    fetchCart();
+  }, []);
+
+  const updateCartAPI = async (updatedItems) => {
+    try {
+      await fetch("http://localhost:3001/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedItems)
+      });
+    } catch (err) {
+      console.error("Error updating cart:", err);
+    }
+  };
 
    const discountRate = 0.1; 
 
   const increaseQty = (id) => {
-    setItems(
-      items.map((item) =>
-        item.id === id ? { ...item, qty: item.qty + 1 } : item
-      )
+    const updatedItems = items.map((item) =>
+      item.id === id ? { ...item, qty: item.qty + 1 } : item
     );
+    setItems(updatedItems);
+    updateCartAPI(updatedItems);
   };
 
   const decreaseQty = (id) => {
-    setItems(
-      items.map((item) =>
-        item.id === id && item.qty > 1
-          ? { ...item, qty: item.qty - 1 }
-          : item
-      )
+    const updatedItems = items.map((item) =>
+      item.id === id && item.qty > 1
+        ? { ...item, qty: item.qty - 1 }
+        : item
     );
+    setItems(updatedItems);
+    updateCartAPI(updatedItems);
   };
 
   const subtotal = items.reduce(

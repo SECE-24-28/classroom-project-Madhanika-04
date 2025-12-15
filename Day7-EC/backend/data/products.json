@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Trendy Feminine T-Shirt with Jeans",
+    "price": 999,
+    "image": "item1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Stylish Floral Print Sleeveless Maxi Dress",
+    "price": 50000,
+    "image": "item2.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Blooming Beautiful Floral Maxidress Styles",
+    "price": 20000,
+    "image": "item3.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Flycurvy Plus Size Wedding Guest Light Apricot Chiffon Floral Print Wrap Flutter Sleeve Maxi Dress",
+    "price": 10000,
+    "image": "item4.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Maxi Dress with Floral Design",
+    "price": 20000,
+    "image": "item5 .jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Maxi with Front cut",
+    "price": 30000,
+    "image": "item6.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Maxi with Front cut",
+    "price": 30000,
+    "image": "item7.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Green Wedding Set",
+    "price": 30000,
+    "image": "item8.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Peach Wedding Kurta",
+    "price": 30000,
+    "image": "item9.jpeg"
+  },
+  {
+    "name": "Maxi Dress",
+    "price": 2500,
+    "image": "item2.jpeg",
+    "id": 10
+  }
+]
